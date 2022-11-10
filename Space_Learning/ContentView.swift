@@ -13,7 +13,7 @@ struct ContentView: View {
             Image(systemName: "book")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Space Learning Testing Application 1234")
+            Text("Space Learning Testing Application 1234gfytftfdytfdytdfytdyrtd")
             //chnage the text after push
         }
         .padding()
