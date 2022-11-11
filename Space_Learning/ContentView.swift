@@ -9,16 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "book")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Space Learning Testing Application - swift ")
-            //chnage the text after push
-            
-            //GITHUB WORKING PROPPERLY
+        VStack{
+            Text("Testing Space Learning ")
+                //tetsing success
+                .foregroundColor(Color.blue)
         }
-        .padding()
+        
     }
 }
 
