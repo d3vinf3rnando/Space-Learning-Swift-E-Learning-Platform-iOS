@@ -13,8 +13,10 @@ struct ContentView: View {
             Image(systemName: "book")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Space Learning Testing Application 1234gfytftfdytfdytdfytdyrtd")
+            Text("Space Learning Testing Application - swift ")
             //chnage the text after push
+            
+            //GITHUB WORKING PROPPERLY
         }
         .padding()
     }
