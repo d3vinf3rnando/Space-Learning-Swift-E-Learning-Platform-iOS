@@ -13,6 +13,8 @@ struct ContentView: View {
             Text("Testing Space Learning ")
                 //tetsing success
                 .foregroundColor(Color.blue)
+            
+            Text("hello world")
         }
         
     }
