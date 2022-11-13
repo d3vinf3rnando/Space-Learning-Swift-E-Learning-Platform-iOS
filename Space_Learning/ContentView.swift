@@ -15,6 +15,7 @@ struct ContentView: View {
                 .foregroundColor(Color.blue)
             
             Text("hello world")
+            Text("hello world")
         }
         
     }
