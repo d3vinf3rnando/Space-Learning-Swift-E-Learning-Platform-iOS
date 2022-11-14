@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D89051C329221E7D0003185E /* spalshscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89051C229221E7D0003185E /* spalshscreen.swift */; };
 		D8BA0000291CD0B000E7CA23 /* Space_LearningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BAFFFF291CD0B000E7CA23 /* Space_LearningTests.swift */; };
 		D8BA000A291CD0B000E7CA23 /* Space_LearningUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA0009291CD0B000E7CA23 /* Space_LearningUITests.swift */; };
 		D8BA000C291CD0B000E7CA23 /* Space_LearningUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA000B291CD0B000E7CA23 /* Space_LearningUITestsLaunchTests.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D89051C229221E7D0003185E /* spalshscreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spalshscreen.swift; sourceTree = "<group>"; };
 		D8BA0005291CD0B000E7CA23 /* Space_LearningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Space_LearningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8BA0009291CD0B000E7CA23 /* Space_LearningUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space_LearningUITests.swift; sourceTree = "<group>"; };
 		D8BA000B291CD0B000E7CA23 /* Space_LearningUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space_LearningUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			children = (
 				D8BAFFEE291CD0AC00E7CA23 /* Space_LearningApp.swift */,
 				D8BAFFF0291CD0AC00E7CA23 /* ContentView.swift */,
+				D89051C229221E7D0003185E /* spalshscreen.swift */,
 				D8BAFFF2291CD0AF00E7CA23 /* Assets.xcassets */,
 				D8BAFFF4291CD0AF00E7CA23 /* Preview Content */,
 			);
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D89051C329221E7D0003185E /* spalshscreen.swift in Sources */,
 				D8BAFFF1291CD0AC00E7CA23 /* ContentView.swift in Sources */,
 				D8BAFFEF291CD0AC00E7CA23 /* Space_LearningApp.swift in Sources */,
 			);

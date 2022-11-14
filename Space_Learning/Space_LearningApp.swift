@@ -11,7 +11,7 @@ import SwiftUI
 struct Space_LearningApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreenView()
         }
     }
 }
