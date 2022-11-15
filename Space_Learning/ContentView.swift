@@ -15,6 +15,7 @@ struct ContentView: View {
             VStack{
                 //main VSTACK
                 Spacer(minLength: 50)
+                    
                 
                 VStack{
                 
@@ -35,12 +36,13 @@ struct ContentView: View {
                 
                 NavigationLink(destination:HomePage()){
                     Text("Next")
-                        .frame(width:378, height:60)
+                        .frame(maxWidth: .infinity, minHeight: 60.0)
                         .foregroundColor(Color.white)
+                    
                         .background(purple1)
                         .cornerRadius(8)
                     
-                    }
+                }.padding(EdgeInsets(top: 0, leading: 20.0, bottom: 0, trailing: 20.0))
                 
                 Spacer(minLength: 20)
                 
@@ -57,10 +59,16 @@ struct ContentView: View {
 
 struct HomePage :View{
     var body: some View{
-        VStack{
-            Text("Home Page")
+        NavigationView{
+            ZStack{
+                VStack{
+                    Image("icon1")
+                        
+                }
+                .padding(EdgeInsets(top: 0, leading: 0, bottom:400.0, trailing: 0))
+            }
         }
-        .navigationBarBackButtonHidden(true)
+//        .navigationBarBackButtonHidden(true)
     }
        
 
