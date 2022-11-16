@@ -38,6 +38,7 @@ struct ContentView: View {
                     Text("Next")
                         .frame(maxWidth: .infinity, minHeight: 60.0)
                         .foregroundColor(Color.white)
+                        .font(.title2)
                     
                         .background(purple1)
                         .cornerRadius(8)
@@ -58,7 +59,11 @@ struct ContentView: View {
 
 
 struct HomePage :View{
+    @State private var username = ""
+    @State private var password = ""
     var body: some View{
+        let purple1 : Color = Color(red: 0.294, green: 0.451, blue: 1)
+
         NavigationView{
             ZStack{
                 VStack{
@@ -66,6 +71,60 @@ struct HomePage :View{
                         
                 }
                 .padding(EdgeInsets(top: 0, leading: 0, bottom:400.0, trailing: 0))
+                
+                
+                VStack{
+                    //add text field here
+                    TextField("Username", text: $username)
+                        .padding()
+                        .frame(maxWidth: .infinity, minHeight: 60.0)
+                        .background(Color.black.opacity(0.05))
+                        .cornerRadius(8)
+                        .padding(EdgeInsets(top: 0, leading: 20.0, bottom: 0, trailing: 20.0))
+                       
+                        //.border(.red, width: <#T##CGFloat#>(wrongUsername))
+                    
+                   
+                    
+                    SecureField("Password", text: $password)
+                        .padding()
+                        .frame(maxWidth: .infinity, minHeight: 60.0)
+                        .background(Color.black.opacity(0.05))
+                        .cornerRadius(8)
+                        .padding(EdgeInsets(top: 10, leading: 20.0, bottom: 0, trailing: 20.0))
+                        //red line build when user enterd a wrong passsword
+                        //.border(.red, width: <#T##CGFloat#>(wrongUsername))
+                    
+                    Text("Forgot Password")
+                        .foregroundColor(purple1)
+                        .padding(EdgeInsets(top: 15.0, leading: 0, bottom: 0, trailing: 0))
+                    //change text into navigation link later
+                    
+                    
+                    Button("Login"){
+                        
+                    }
+                    .font(.title2)
+                    .foregroundColor(Color.white)
+                    .frame(maxWidth: .infinity, minHeight: 60.0)
+                    .background(purple1)
+                    .cornerRadius(8)
+                    
+                    .padding(EdgeInsets(top: 140, leading: 20.0, bottom: 0, trailing: 20.0))
+                    
+                    //navigation link need to be added
+                    
+                    
+                    
+                }
+                .padding(EdgeInsets(top:360.0, leading: 0, bottom:0, trailing: 0))
+                //input field padding
+                
+               
+                
+                
+               
+                
             }
         }
 //        .navigationBarBackButtonHidden(true)
