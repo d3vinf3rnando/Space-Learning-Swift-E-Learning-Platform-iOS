@@ -101,18 +101,25 @@ struct HomePage :View{
                     //change text into navigation link later
                     
                     
-                    Button("Login"){
-                        
+                    
+                    NavigationLink(destination:HomeScreen()){
+                        Text("Login")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.white)
+                            .frame(maxWidth: .infinity, minHeight: 60.0)
+                            .background(purple1)
+                            .cornerRadius(8)
                     }
-                    .font(.title2)
-                    .foregroundColor(Color.white)
-                    .frame(maxWidth: .infinity, minHeight: 60.0)
-                    .background(purple1)
-                    .cornerRadius(8)
                     
+
                     .padding(EdgeInsets(top: 140, leading: 20.0, bottom: 0, trailing: 20.0))
+                   
                     
-                    //navigation link need to be added
+
+                    
+                    
+                    
                     
                     
                     
@@ -120,17 +127,45 @@ struct HomePage :View{
                 .padding(EdgeInsets(top:360.0, leading: 0, bottom:0, trailing: 0))
                 //input field padding
                 
-               
-                
-                
-               
-                
             }
         }
-//        .navigationBarBackButtonHidden(true)
+     .navigationBarBackButtonHidden(true)
     }
        
 
+}
+
+
+struct HomeScreen :View{
+    @State private var search=""
+
+    var body: some View{
+        let purple1 : Color = Color(red: 0.294, green: 0.451, blue: 1)
+        ZStack{
+            ZStack{
+                VStack{
+                    Image("smallicon")
+                }
+                .padding(EdgeInsets(top:0, leading: 0, bottom:790, trailing: 350))
+            }
+            
+            ZStack{
+                TextField("search", text: $search)
+                    .padding()
+                    .frame(maxWidth: .infinity, minHeight: 50.0)
+                    .background(Color.black.opacity(0.05))
+                    .cornerRadius(18)
+                    .padding(EdgeInsets(top: 0, leading: 20.0, bottom: 0, trailing: 20.0))
+            }
+            .padding(EdgeInsets(top: 0, leading: 0, bottom: 650, trailing: 0))
+            
+        
+            
+            
+        }
+        .navigationBarBackButtonHidden(true)
+    }
+    
 }
 
 
