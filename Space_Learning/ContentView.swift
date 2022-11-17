@@ -138,6 +138,13 @@ struct HomePage :View{
 
 struct HomeScreen :View{
     @State private var search=""
+    
+    let icons=[
+            "house.fill",
+            "book.closed.fill",
+            "graduationcap.fill",
+            "square.grid.2x2.fill"
+        ]
 
     var body: some View{
         let purple1 : Color = Color(red: 0.294, green: 0.451, blue: 1)
@@ -333,33 +340,116 @@ struct HomeScreen :View{
                     HStack{
                         //yello texts spaces
                         Image("html")
-                            .padding(EdgeInsets(top: 0, leading: -110, bottom: 0, trailing: 0))
+                            .padding(EdgeInsets(top: 0, leading: -90, bottom: 0, trailing: 0))
                         
-                        VStack{
+                        VStack(alignment:.leading){
                             Text("HTML Basics")
+                                .font(.system(size: 16))
+                                .fontWeight(.semibold)
                             Text("30 Lessons")
-                            Text("4.8")
+                                .font(.system(size: 12))
+                                .fontWeight(.semibold)
+                                .opacity(0.5)
+                            HStack{
+                                Image(systemName: "star.fill")
+                                    .foregroundColor(.yellow)
+                                Text("4.8")
+                            }
+                            .font(.system(size: 12))
+                            .fontWeight(.semibold)
+                                
                         }
-                        .padding(EdgeInsets(top: 0, leading: -30, bottom: 0, trailing: 0))
+                        
+                        
+                        .padding(EdgeInsets(top: 0, leading: -10, bottom: 0, trailing: 0))
                         
                         Text("Free")
+                            .foregroundColor(purple1)
+                            .fontWeight(.semibold)
+                            .padding(EdgeInsets(top: 0, leading:100, bottom: 0, trailing: 0))
                     }
+                    .padding(EdgeInsets(top: 0, leading: 60, bottom: 0, trailing: 0))
                 }
-                .frame(maxWidth: .infinity, maxHeight: 90)
-                .background(.yellow)
+                .frame(maxWidth: .infinity, maxHeight: 97)
+                .background(.white)
+                
                 
                 
                 
             }
-                .padding(EdgeInsets(top: 250, leading: 20, bottom: 0, trailing: 20))
             
             
+            .cornerRadius(10)
+            .shadow(color: Color("darkshadow"), radius: 10, x: 8, y: 8)
+            
+                .padding(EdgeInsets(top: 290, leading: 20, bottom: 0, trailing: 20))
+            VStack{
+                VStack{
+                    HStack{
+                        //yello texts spaces
+                        Image("css")
+                            .padding(EdgeInsets(top: 0, leading: -90, bottom: 0, trailing: 0))
+                        
+                        VStack(alignment:.leading){
+                            Text("CSS Fundementals")
+                                .font(.system(size: 16))
+                                .fontWeight(.semibold)
+                            Text("30 Lessons")
+                                .font(.system(size: 12))
+                                .fontWeight(.semibold)
+                                .opacity(0.5)
+                            HStack{
+                                Image(systemName: "star.fill")
+                                    .foregroundColor(.yellow)
+                                Text("4.1")
+                            }
+                            .font(.system(size: 12))
+                            .fontWeight(.semibold)
+                                
+                        }
+                        
+                        
+                        .padding(EdgeInsets(top: 0, leading: -10, bottom: 0, trailing: 0))
+                        
+                        Text("$18.99")
+                            .foregroundColor(purple1)
+                            .fontWeight(.semibold)
+                            .padding(EdgeInsets(top: 0, leading:40, bottom: 0, trailing: 0))
+                    }
+                    .padding(EdgeInsets(top: 0, leading: 60, bottom: 0, trailing: 0))
+                }
+                .frame(maxWidth: .infinity, maxHeight: 97)
+                .background(.white)
+                
+                
+                
+                
+            }
+            .cornerRadius(10)
+            .shadow(color: Color("darkshadow"), radius: 10, x: 8, y: 8)
+            
+                .padding(EdgeInsets(top: 530, leading: 20, bottom: 0, trailing: 20))
+            
+            ZStack{
+                HStack{
+                    ForEach(0..<4, id:\.self){
+                        number in
+                        Spacer()
+                        Button(action:{
+                            
+                        },label:{Image(systemName: icons[number])
+                                .font(.system(size:32))
+                                .foregroundColor(purple1)
+                        })
+                    }
+                }
+            }
+            .padding(EdgeInsets(top: 800, leading: -35, bottom: 0, trailing: 35))
         }
         .navigationBarBackButtonHidden(true)
     }
     
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
