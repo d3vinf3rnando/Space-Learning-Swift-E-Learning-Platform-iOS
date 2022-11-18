@@ -434,17 +434,26 @@ struct HomeScreen :View{
                 HStack{
                     ForEach(0..<4, id:\.self){
                         number in
-                        Spacer()
+                        Spacer(minLength: 5)
                         Button(action:{
                             
                         },label:{Image(systemName: icons[number])
                                 .font(.system(size:32))
                                 .foregroundColor(purple1)
+                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 30))
+                                
                         })
                     }
                 }
+                .frame(width: 400)
+                .frame(height: 80)
+                .background(.white)
+                .cornerRadius(20)
+                .shadow(color: Color("darkshadow"), radius: 10, x: 8, y: 8)
             }
-            .padding(EdgeInsets(top: 800, leading: -35, bottom: 0, trailing: 35))
+            
+            
+            .padding(EdgeInsets(top: 780, leading: 20, bottom: 0, trailing: 20))//35
         }
         .navigationBarBackButtonHidden(true)
     }
