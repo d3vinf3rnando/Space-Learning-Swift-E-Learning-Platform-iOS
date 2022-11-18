@@ -113,7 +113,7 @@ struct HomePage :View{
                     }
                     
 
-                    .padding(EdgeInsets(top: 140, leading: 20.0, bottom: 0, trailing: 20.0))
+                    .padding(EdgeInsets(top: 180, leading: 20.0, bottom: 0, trailing: 20.0))
                    
                     
 
@@ -336,40 +336,43 @@ struct HomeScreen :View{
             //card type courses implemetation
             
             VStack{
-                VStack{
-                    HStack{
-                        //yello texts spaces
-                        Image("html")
-                            .padding(EdgeInsets(top: 0, leading: -90, bottom: 0, trailing: 0))
-                        
-                        VStack(alignment:.leading){
-                            Text("HTML Basics")
-                                .font(.system(size: 16))
-                                .fontWeight(.semibold)
-                            Text("30 Lessons")
+                NavigationLink(destination:CourseDetails()){
+                    VStack{
+                        HStack{
+                            //yello texts spaces
+                            Image("html")
+                                .padding(EdgeInsets(top: 0, leading: -90, bottom: 0, trailing: 0))
+                            
+                            VStack(alignment:.leading){
+                                Text("HTML Basics")
+                                    .font(.system(size: 16))
+                                    .fontWeight(.semibold)
+                                Text("30 Lessons")
+                                    .font(.system(size: 12))
+                                    .fontWeight(.semibold)
+                                    .opacity(0.5)
+                                HStack{
+                                    Image(systemName: "star.fill")
+                                        .foregroundColor(.yellow)
+                                    Text("4.8")
+                                }
                                 .font(.system(size: 12))
                                 .fontWeight(.semibold)
-                                .opacity(0.5)
-                            HStack{
-                                Image(systemName: "star.fill")
-                                    .foregroundColor(.yellow)
-                                Text("4.8")
+                                    
                             }
-                            .font(.system(size: 12))
-                            .fontWeight(.semibold)
-                                
+                            
+                            
+                            .padding(EdgeInsets(top: 0, leading: -10, bottom: 0, trailing: 0))
+                            
+                            Text("Free")
+                                .foregroundColor(purple1)
+                                .fontWeight(.semibold)
+                                .padding(EdgeInsets(top: 0, leading:100, bottom: 0, trailing: 0))
                         }
-                        
-                        
-                        .padding(EdgeInsets(top: 0, leading: -10, bottom: 0, trailing: 0))
-                        
-                        Text("Free")
-                            .foregroundColor(purple1)
-                            .fontWeight(.semibold)
-                            .padding(EdgeInsets(top: 0, leading:100, bottom: 0, trailing: 0))
+                        .padding(EdgeInsets(top: 0, leading: 60, bottom: 0, trailing: 0))
                     }
-                    .padding(EdgeInsets(top: 0, leading: 60, bottom: 0, trailing: 0))
                 }
+                .foregroundColor(.black)
                 .frame(maxWidth: .infinity, maxHeight: 97)
                 .background(.white)
                 
@@ -382,42 +385,46 @@ struct HomeScreen :View{
             .cornerRadius(10)
             .shadow(color: Color("darkshadow"), radius: 10, x: 8, y: 8)
             
+            
                 .padding(EdgeInsets(top: 290, leading: 20, bottom: 0, trailing: 20))
             VStack{
-                VStack{
-                    HStack{
-                        //yello texts spaces
-                        Image("css")
-                            .padding(EdgeInsets(top: 0, leading: -90, bottom: 0, trailing: 0))
-                        
-                        VStack(alignment:.leading){
-                            Text("CSS Fundementals")
-                                .font(.system(size: 16))
-                                .fontWeight(.semibold)
-                            Text("30 Lessons")
+                NavigationLink(destination:CourseDetails2()){
+                    VStack{
+                        HStack{
+                            //yello texts spaces
+                            Image("css")
+                                .padding(EdgeInsets(top: 0, leading: -90, bottom: 0, trailing: 0))
+                            
+                            VStack(alignment:.leading){
+                                Text("CSS Fundementals")
+                                    .font(.system(size: 16))
+                                    .fontWeight(.semibold)
+                                Text("30 Lessons")
+                                    .font(.system(size: 12))
+                                    .fontWeight(.semibold)
+                                    .opacity(0.5)
+                                HStack{
+                                    Image(systemName: "star.fill")
+                                        .foregroundColor(.yellow)
+                                    Text("4.1")
+                                }
                                 .font(.system(size: 12))
                                 .fontWeight(.semibold)
-                                .opacity(0.5)
-                            HStack{
-                                Image(systemName: "star.fill")
-                                    .foregroundColor(.yellow)
-                                Text("4.1")
+                                    
                             }
-                            .font(.system(size: 12))
-                            .fontWeight(.semibold)
-                                
+                            
+                            
+                            .padding(EdgeInsets(top: 0, leading: -10, bottom: 0, trailing: 0))
+                            
+                            Text("$18.99")
+                                .foregroundColor(purple1)
+                                .fontWeight(.semibold)
+                                .padding(EdgeInsets(top: 0, leading:40, bottom: 0, trailing: 0))
                         }
-                        
-                        
-                        .padding(EdgeInsets(top: 0, leading: -10, bottom: 0, trailing: 0))
-                        
-                        Text("$18.99")
-                            .foregroundColor(purple1)
-                            .fontWeight(.semibold)
-                            .padding(EdgeInsets(top: 0, leading:40, bottom: 0, trailing: 0))
+                        .padding(EdgeInsets(top: 0, leading: 60, bottom: 0, trailing: 0))
                     }
-                    .padding(EdgeInsets(top: 0, leading: 60, bottom: 0, trailing: 0))
                 }
+                .foregroundColor(.black)
                 .frame(maxWidth: .infinity, maxHeight: 97)
                 .background(.white)
                 
@@ -458,6 +465,76 @@ struct HomeScreen :View{
         .navigationBarBackButtonHidden(true)
     }
     
+}
+
+
+struct CourseDetails:View{
+    var body: some View{
+        let purple1 : Color = Color(red: 0.294, green: 0.451, blue: 1)
+        ZStack{
+            VStack{
+                Image("cimage")
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 510, trailing: 0))
+            }
+            
+            VStack{
+                HStack{
+                    Text("HTML Basics")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .padding(EdgeInsets(top: 0, leading: -140, bottom: 0, trailing: 0))
+                    Image(systemName: "heart.fill")
+                        .font(.title2)
+                        .foregroundColor(purple1)
+                        .frame(maxWidth: 40,maxHeight: 40)
+                        .background(Color("purpback"))
+                        .cornerRadius(8)
+                        .padding(EdgeInsets(top: 0, leading: 170, bottom: 0, trailing: 0))
+                    
+                    
+                    
+                }
+                .padding(EdgeInsets(top: 0, leading: 130, bottom: 160, trailing: 0))
+            }
+            
+            VStack{
+                Text("Getting started is simple. We’ll give you everything you need to learn to code. Starting is easy. We’ll help you write your first line of code in minutes. Beginner-Friendly.")
+                    .padding(25)
+                    .opacity(0.5)
+            }
+            
+            VStack{
+                HStack{
+                    Image("profile")
+                        .padding(EdgeInsets(top: 0, leading: -20, bottom: 0, trailing: 0))
+                    
+                    VStack(alignment:.leading){
+                        Text("Jhon Doe")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                        Text("Senior Software Engineer")
+                            .opacity(0.5)
+                    }
+                    .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
+                    
+                }
+            }
+            .padding(EdgeInsets(top: 250, leading: 0, bottom: 0, trailing: 90))
+            
+            VStack{
+                
+            }
+            
+            
+            
+        }
+    }
+}
+
+struct CourseDetails2:View{
+    var body:some View{
+        Text("CSS Course")
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
