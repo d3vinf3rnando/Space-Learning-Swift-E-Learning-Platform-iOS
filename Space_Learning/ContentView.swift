@@ -470,6 +470,7 @@ struct HomeScreen :View{
 
 struct CourseDetails:View{
     var body: some View{
+        
         let purple1 : Color = Color(red: 0.294, green: 0.451, blue: 1)
         ZStack{
             VStack{
@@ -519,16 +520,91 @@ struct CourseDetails:View{
                     
                 }
             }
-            .padding(EdgeInsets(top: 250, leading: 0, bottom: 0, trailing: 90))
+            .padding(EdgeInsets(top: 220, leading: 0, bottom: 0, trailing: 90))
             
-            VStack{
+            VStack(alignment:.leading){
+                HStack{
+                    Image(systemName: "calendar")
+                        .foregroundColor(purple1)
+                    Text("December 01 2022")
+                        .opacity(0.5)
+                        
+                }
+                
+                HStack{
+                    Image(systemName: "clock.arrow.circlepath")
+                        .foregroundColor(purple1)
+                    Text("18 Hours")
+                        .opacity(0.5)
+                        
+                }
+            }
+            .padding(EdgeInsets(top: 360, leading: 0, bottom: 0, trailing: 210))
+            
+            VStack(alignment:.leading){
+                VStack{
+                    Text("People Enrolled")
+                        .font(.title3)
+                        .fontWeight(.semibold)
+                }
+                
+                VStack{
+                    HStack{
+                        Image("enroll")
+                        Text("86 People Enrolled")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                            .opacity(0.5)
+                            .padding(EdgeInsets(top: 0, leading: 40, bottom: 0, trailing: 0))
+                    }
+                    
+                    
+                }
+                
+                
                 
             }
+            .padding(EdgeInsets(top: 530, leading: 0, bottom: 0, trailing: 0))
+            
+            VStack{
+                HStack{
+                    VStack(alignment:.leading){
+                        Text("Starting in:")
+                            .foregroundColor(.black)
+                            .opacity(0.5)
+                            .fontWeight(.semibold)
+                            
+                        Text("3 Days")
+                            .foregroundColor(purple1)
+                            .fontWeight(.semibold)
+                    }
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    
+                    Text("Enroll Now")
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width:130,height: 47)
+                        .background(purple1)
+                        .cornerRadius(15)
+                        .padding(EdgeInsets(top: 0, leading: 120, bottom: 0, trailing: 0))
+                }
+                
+                
+            }
+            .frame(maxWidth: .infinity,maxHeight: 80)
+            .background(.white)
+            .shadow(color: Color("darkshadow"), radius: 10, x: 8, y: 15)
+            .cornerRadius(10)
+            .padding(EdgeInsets(top: 720, leading: 20, bottom: 0, trailing: 20))
+            
             
             
             
         }
+        .ignoresSafeArea(.all)
+        
     }
+    
 }
 
 struct CourseDetails2:View{
