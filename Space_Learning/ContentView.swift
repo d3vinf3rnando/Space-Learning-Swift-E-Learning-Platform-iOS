@@ -467,8 +467,9 @@ struct HomeScreen :View{
     
 }
 
-
+import AVKit
 struct CourseDetails:View{
+  
     var body: some View{
         
         let purple1 : Color = Color(red: 0.294, green: 0.451, blue: 1)
@@ -484,13 +485,26 @@ struct CourseDetails:View{
                         .font(.title2)
                         .fontWeight(.semibold)
                         .padding(EdgeInsets(top: 0, leading: -140, bottom: 0, trailing: 0))
-                    Image(systemName: "heart.fill")
-                        .font(.title2)
-                        .foregroundColor(purple1)
-                        .frame(maxWidth: 40,maxHeight: 40)
-                        .background(Color("purpback"))
-                        .cornerRadius(8)
-                        .padding(EdgeInsets(top: 0, leading: 170, bottom: 0, trailing: 0))
+                    
+                    Button(action:{
+                        
+                    },label:{Image(systemName: "heart.fill")
+                            .font(.title2)
+                            .foregroundColor(purple1)
+                            .frame(maxWidth: 40,maxHeight: 40)
+                            .background(Color("purpback"))
+                            .cornerRadius(8)
+                            .padding(EdgeInsets(top: 0, leading: 170, bottom: 0, trailing: 0))
+                            
+                    })
+                    
+//                    Image(systemName: "heart.fill")
+//                        .font(.title2)
+//                        .foregroundColor(purple1)
+//                        .frame(maxWidth: 40,maxHeight: 40)
+//                        .background(Color("purpback"))
+//                        .cornerRadius(8)
+//                        .padding(EdgeInsets(top: 0, leading: 170, bottom: 0, trailing: 0))
                     
                     
                     
@@ -580,21 +594,25 @@ struct CourseDetails:View{
                     }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     
-                    Text("Enroll Now")
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
-                        .frame(width:130,height: 47)
-                        .background(purple1)
-                        .cornerRadius(15)
-                        .padding(EdgeInsets(top: 0, leading: 120, bottom: 0, trailing: 0))
+                    HStack{
+                        NavigationLink(destination:CourseContent()){
+                            Text("Enroll Now")
+                                .fontWeight(.semibold)
+                                .foregroundColor(.white)
+                                .frame(width:130,height: 47)
+                                .background(purple1)
+                                .cornerRadius(15)
+                                .padding(EdgeInsets(top: 0, leading: 120, bottom: 0, trailing: 0))
+                        }
+                    }
                 }
                 
                 
             }
             .frame(maxWidth: .infinity,maxHeight: 80)
             .background(.white)
-            .shadow(color: Color("darkshadow"), radius: 10, x: 8, y: 15)
             .cornerRadius(10)
+            .shadow(color: Color("darkshadow"), radius: 10, x: 8, y: 15)
             .padding(EdgeInsets(top: 720, leading: 20, bottom: 0, trailing: 20))
             
             
@@ -612,6 +630,8 @@ struct CourseDetails2:View{
         Text("CSS Course")
     }
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
