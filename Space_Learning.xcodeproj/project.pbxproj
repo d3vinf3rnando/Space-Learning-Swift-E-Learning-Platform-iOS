@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		D89051C329221E7D0003185E /* spalshscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89051C229221E7D0003185E /* spalshscreen.swift */; };
 		D8B33FCE2929F89000AB3123 /* CourseContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B33FCD2929F89000AB3123 /* CourseContent.swift */; };
-		D8B33FD0292BBDEA00AB3123 /* Screen Recording 2022-11-21 at 7.38.17 PM.mov in Resources */ = {isa = PBXBuildFile; fileRef = D8B33FCF292BBDEA00AB3123 /* Screen Recording 2022-11-21 at 7.38.17 PM.mov */; };
 		D8B33FD3292BC07300AB3123 /* videoplayback.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D8B33FD2292BC07300AB3123 /* videoplayback.mp4 */; };
+		D8B33FD8292C199A00AB3123 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D8B33FD7292C199A00AB3123 /* FirebaseAnalytics */; };
+		D8B33FDA292C199A00AB3123 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = D8B33FD9292C199A00AB3123 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		D8BA0000291CD0B000E7CA23 /* Space_LearningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BAFFFF291CD0B000E7CA23 /* Space_LearningTests.swift */; };
 		D8BA000A291CD0B000E7CA23 /* Space_LearningUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA0009291CD0B000E7CA23 /* Space_LearningUITests.swift */; };
 		D8BA000C291CD0B000E7CA23 /* Space_LearningUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA000B291CD0B000E7CA23 /* Space_LearningUITestsLaunchTests.swift */; };
@@ -40,7 +41,6 @@
 /* Begin PBXFileReference section */
 		D89051C229221E7D0003185E /* spalshscreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spalshscreen.swift; sourceTree = "<group>"; };
 		D8B33FCD2929F89000AB3123 /* CourseContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContent.swift; sourceTree = "<group>"; };
-		D8B33FCF292BBDEA00AB3123 /* Screen Recording 2022-11-21 at 7.38.17 PM.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "Screen Recording 2022-11-21 at 7.38.17 PM.mov"; path = "../../../../../var/folders/j6/6zthds6j4314l1n5_jmzpk9h0000gn/T/TemporaryItems/NSIRD_screencaptureui_T6lfZb/Screen Recording 2022-11-21 at 7.38.17 PM.mov"; sourceTree = "<group>"; };
 		D8B33FD2292BC07300AB3123 /* videoplayback.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = videoplayback.mp4; path = ../../videoplayback.mp4; sourceTree = "<group>"; };
 		D8BA0005291CD0B000E7CA23 /* Space_LearningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Space_LearningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8BA0009291CD0B000E7CA23 /* Space_LearningUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space_LearningUITests.swift; sourceTree = "<group>"; };
@@ -66,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8B33FD8292C199A00AB3123 /* FirebaseAnalytics in Frameworks */,
+				D8B33FDA292C199A00AB3123 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +86,6 @@
 			children = (
 				D8BA0009291CD0B000E7CA23 /* Space_LearningUITests.swift */,
 				D8BA000B291CD0B000E7CA23 /* Space_LearningUITestsLaunchTests.swift */,
-				D8B33FCF292BBDEA00AB3123 /* Screen Recording 2022-11-21 at 7.38.17 PM.mov */,
 			);
 			path = Space_LearningUITests;
 			sourceTree = "<group>";
@@ -173,6 +174,10 @@
 			dependencies = (
 			);
 			name = Space_Learning;
+			packageProductDependencies = (
+				D8B33FD7292C199A00AB3123 /* FirebaseAnalytics */,
+				D8B33FD9292C199A00AB3123 /* FirebaseAnalyticsWithoutAdIdSupport */,
+			);
 			productName = Space_Learning;
 			productReference = D8BAFFEB291CD0AC00E7CA23 /* Space_Learning.app */;
 			productType = "com.apple.product-type.application";
@@ -227,6 +232,9 @@
 				Base,
 			);
 			mainGroup = D8BAFFE2291CD0AC00E7CA23;
+			packageReferences = (
+				D8B33FD6292C199A00AB3123 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = D8BAFFEC291CD0AC00E7CA23 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -243,7 +251,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8B33FD0292BBDEA00AB3123 /* Screen Recording 2022-11-21 at 7.38.17 PM.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,13 +441,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Space_Learning/Preview Content\"";
+				DEVELOPMENT_TEAM = 438DD3WKDT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Space Learning";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -463,13 +474,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Space_Learning/Preview Content\"";
+				DEVELOPMENT_TEAM = 4MR76LK8Z4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Space Learning";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -490,6 +505,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4MR76LK8Z4;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
@@ -509,6 +525,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4MR76LK8Z4;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
@@ -527,6 +544,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4MR76LK8Z4;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Devin.Space-LearningUITests";
@@ -544,6 +562,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4MR76LK8Z4;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Devin.Space-LearningUITests";
@@ -595,6 +614,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D8B33FD6292C199A00AB3123 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D8B33FD7292C199A00AB3123 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8B33FD6292C199A00AB3123 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		D8B33FD9292C199A00AB3123 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8B33FD6292C199A00AB3123 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D8BAFFE3291CD0AC00E7CA23 /* Project object */;
 }

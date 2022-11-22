@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct Space_LearningApp: App {
+    
     var body: some Scene {
         WindowGroup {
             SplashScreenView()

@@ -24,8 +24,8 @@ struct CourseContent: View {
             VStack{
                 HStack{
                     Text("HTML Basics")
-                        .font(.title2)
-                        .fontWeight(.semibold)
+                        .font(.title2.weight(.semibold))
+                        
                         .padding(EdgeInsets(top: 0, leading: -140, bottom: 0, trailing: 0))
                     Image(systemName: "arrowshape.turn.up.forward.fill")
                         .font(.title2)
@@ -49,7 +49,7 @@ struct CourseContent: View {
                             
                             Text("01. Introduction")
                                 .foregroundColor(.black)
-                                .fontWeight(.semibold)
+                                .font(.body.weight(.semibold))
                                 .padding(EdgeInsets(top: 0, leading: 90, bottom: 0, trailing: 0))
                         }
                     }
@@ -69,7 +69,7 @@ struct CourseContent: View {
                             
                             Text("01. Introduction")
                                 .foregroundColor(.black)
-                                .fontWeight(.semibold)
+                                .font(.body.weight(.semibold))
                                 .padding(EdgeInsets(top: 0, leading: 90, bottom: 0, trailing: 0))
                         }
                     }
@@ -89,7 +89,7 @@ struct CourseContent: View {
                             
                             Text("01. Introduction")
                                 .foregroundColor(.black)
-                                .fontWeight(.semibold)
+                                .font(.body.weight(.semibold))
                                 .padding(EdgeInsets(top: 0, leading: 90, bottom: 0, trailing: 0))
                         }
                     }
@@ -109,7 +109,7 @@ struct CourseContent: View {
                             
                             Text("01. Introduction")
                                 .foregroundColor(.black)
-                                .fontWeight(.semibold)
+                                .font(.body.weight(.semibold))
                                 .padding(EdgeInsets(top: 0, leading: 90, bottom: 0, trailing: 0))
                         }
                     }
@@ -129,7 +129,7 @@ struct CourseContent: View {
                             
                             Text("01. Introduction")
                                 .foregroundColor(.black)
-                                .fontWeight(.semibold)
+                                .font(.body.weight(.semibold))
                                 .padding(EdgeInsets(top: 0, leading: 90, bottom: 0, trailing: 0))
                         }
                     }

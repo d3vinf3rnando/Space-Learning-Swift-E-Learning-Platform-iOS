@@ -5,6 +5,8 @@
 //  Created by Devin Fernando on 2022-11-10.
 //
 
+
+      
 import SwiftUI
 
 struct ContentView: View {
@@ -15,13 +17,12 @@ struct ContentView: View {
             VStack{
                 //main VSTACK
                 Spacer(minLength: 50)
-                    
-                
                 VStack{
                 
                     Text("Beyond the Space")
                         .foregroundColor(Color.black)
                         .font(.system(size:22))
+                        
                 }
                 
                 Spacer(minLength: 190)
@@ -180,13 +181,13 @@ struct HomeScreen :View{
                         VStack(alignment:.leading){
                             Text("Learn \nReact JS")
                                 .lineLimit(2)
-                                .fontWeight(.bold)
+                                .font(.title2.weight(.bold))
                                 
                             
                             Text("Enroll Now")
                                 .padding(8)
-                                .font(.title3)
-                                .fontWeight(.bold)
+                                .font(.title3.weight(.bold))
+//                                .fontWeight(.bold)
                                 .background(Color.yellow)
                                 .cornerRadius(18)
                                 
@@ -216,13 +217,14 @@ struct HomeScreen :View{
                     VStack(alignment:.leading){
                         Text("Learn \nReact JS")
                             .lineLimit(2)
-                            .fontWeight(.bold)
+                            .font(.title2.weight(.semibold))
+//                            .fontWeight(.bold)
                             
                         
                         Text("Enroll Now")
                             .padding(8)
-                            .font(.title3)
-                            .fontWeight(.bold)
+                            .font(.title3.weight(.semibold))
+                           
                             .background(Color.yellow)
                             .cornerRadius(18)
                             
@@ -252,13 +254,13 @@ struct HomeScreen :View{
                     VStack(alignment:.leading){
                         Text("Learn \nReact JS")
                             .lineLimit(2)
-                            .fontWeight(.bold)
+                            .font(.title2.weight(.semibold))
                             
                         
                         Text("Enroll Now")
                             .padding(8)
-                            .font(.title3)
-                            .fontWeight(.bold)
+                            .font(.title3.weight(.semibold))
+                            
                             .background(Color.yellow)
                             .cornerRadius(18)
                             
@@ -298,7 +300,7 @@ struct HomeScreen :View{
                     Text("All")
                         .padding(20)
                         .frame(maxWidth: 80,maxHeight: 40)
-                        .fontWeight(.semibold)
+                        .font(.body.weight(.semibold))
                         .foregroundColor(.white)
                         .background(purple1)
                         .cornerRadius(20)
@@ -308,7 +310,7 @@ struct HomeScreen :View{
                     Text("Popular")
                         .padding(20)
                         .frame(maxWidth: 110,maxHeight: 40)
-                        .fontWeight(.semibold)
+                        .font(.body.weight(.semibold))
                         .foregroundColor(purple1)
                         .cornerRadius(20)
                         .overlay(
@@ -322,7 +324,7 @@ struct HomeScreen :View{
                         .padding(20)
                         .frame(maxWidth: 100,maxHeight: 40)
                         .foregroundColor(purple1)
-                        .fontWeight(.semibold)
+                        .font(.body.weight(.semibold))
                         .cornerRadius(20)
                         .overlay(
                                     Capsule(style: .continuous)
@@ -356,8 +358,8 @@ struct HomeScreen :View{
                                         .foregroundColor(.yellow)
                                     Text("4.8")
                                 }
-                                .font(.system(size: 12))
-                                .fontWeight(.semibold)
+                                .font(.system(size: 12).weight(.semibold))
+                                
                                     
                             }
                             
@@ -408,8 +410,8 @@ struct HomeScreen :View{
                                         .foregroundColor(.yellow)
                                     Text("4.1")
                                 }
-                                .font(.system(size: 12))
-                                .fontWeight(.semibold)
+                                .font(.system(size: 12).weight(.semibold))
+                                
                                     
                             }
                             
@@ -586,7 +588,7 @@ struct CourseDetails:View{
                         Text("Starting in:")
                             .foregroundColor(.black)
                             .opacity(0.5)
-                            .fontWeight(.semibold)
+                            .font(.body.weight(.semibold))
                             
                         Text("3 Days")
                             .foregroundColor(purple1)
