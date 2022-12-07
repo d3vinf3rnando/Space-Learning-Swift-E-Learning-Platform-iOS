@@ -23,6 +23,8 @@ struct CourseContent: View {
             //course name and share button
             VStack{
                 HStack{
+
+                    //html course
                     Text("HTML Basics")
                         .font(.title2.weight(.semibold))
                         
