@@ -126,6 +126,7 @@ struct CourseContent: View {
                     NavigationLink(destination:VideoOne()){
                         HStack{
                             Image("vplay")
+                            //content need be added
                             
                             Text("01. Introduction")
                                 .foregroundColor(.black)
