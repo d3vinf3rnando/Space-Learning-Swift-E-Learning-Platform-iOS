@@ -53,6 +53,7 @@ struct CourseContent: View {
                                 .foregroundColor(.black)
                                 .font(.body.weight(.semibold))
                                 .padding(EdgeInsets(top: 0, leading: 90, bottom: 0, trailing: 0))
+                                //.padding(EdgeInsets(top: 0, leading: 90, bottom: 0, trailing: 0))
                         }
                     }
                 }
