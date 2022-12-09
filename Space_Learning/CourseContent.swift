@@ -128,7 +128,7 @@ struct CourseContent: View {
                 VStack{
                     NavigationLink(destination:VideoOne()){
                         HStack{
-                            Image("vplay")
+                            Image("iplay")
                             //content need be added
                             
                             Text("01. Introduction")
